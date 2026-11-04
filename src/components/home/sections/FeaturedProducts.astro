@@ -1,0 +1,101 @@
+---
+import type { Lang } from "../../../i18n/config.i18n";
+import homeContent from "../../../data/site-home-content.json";
+import type { ProductItem } from "../../../actions/products/getFeaturedProducts.action";
+
+interface Props {
+  lang: Lang;
+  products: ProductItem[];
+}
+
+const { lang, products } = Astro.props;
+const t = homeContent[lang] ?? homeContent.es;
+const section = t.featuredProducts;
+---
+
+<section id={section.id} class="bg-brand-dark-section text-white py-20 sm:py-28 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Title & Subtitle -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+        {section.title}
+      </h2>
+      <p class="text-base sm:text-lg text-brand-green-light leading-relaxed">
+        {section.subtitle}
+      </p>
+    </div>
+
+    <!-- Product Cards Grid: 1 col on mobile, 2 on md, 4 on lg -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {
+        products.map((product) => {
+          const localizedTitle = product.title[lang] || product.title.es;
+          const localizedDesc = product.description[lang] || product.description.es;
+          const detailUrl = `/${lang}/productos/${product.slug}`;
+
+          return (
+            <article class="card-product flex flex-col justify-between overflow-hidden p-6 bg-white text-gray-900 group">
+              <div>
+                <!-- Product Image Slot -->
+                <div class="aspect-square w-full rounded-xl bg-gray-50 flex items-center justify-center p-4 mb-4 overflow-hidden">
+                  <img
+                    src={`/images/products/${product.slug}.png`}
+                    alt={localizedTitle}
+                    width="280"
+                    height="280"
+                    class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    loading="lazy"
+                  />
+                </div>
+
+                <!-- Category & Price -->
+                <div class="flex items-center justify-between mb-2">
+                  <span class="badge-pill-botanical !py-0.5 !px-2.5 !text-[11px] uppercase tracking-wider">
+                    {product.category}
+                  </span>
+                  <span class="text-lg font-bold text-brand-green-primary">
+                    ${product.price.toFixed(2)}
+                  </span>
+                </div>
+
+                <!-- Product Title -->
+                <h3 class="text-base font-bold text-brand-green-dark mb-2 line-clamp-2">
+                  <a href={detailUrl} class="hover:text-brand-amber transition-colors">
+                    {localizedTitle}
+                  </a>
+                </h3>
+
+                <!-- Product Short Description -->
+                <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-6">
+                  {localizedDesc}
+                </p>
+              </div>
+
+              <!-- Action CTAs -->
+              <div class="space-y-2 pt-2 border-t border-brand-green-border/30">
+                <a
+                  href={detailUrl}
+                  class="btn-outline-green w-full !py-2 !text-xs text-center"
+                >
+                  {section.viewProductBtn}
+                </a>
+
+                <a
+                  href={product.amazonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-primary-amber w-full !py-2 !text-xs text-center flex items-center justify-center gap-1.5"
+                >
+                  <span>🛒</span>
+                  <span>{section.buyAmazonBtn}</span>
+                </a>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+
+  </div>
+</section>

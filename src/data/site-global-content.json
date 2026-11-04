@@ -1,0 +1,198 @@
+{
+  "es": {
+    "navbar": {
+      "logoAlt": "Logo de BroncoMiel",
+      "menuToggleAria": "Alternar navegación móvil"
+    },
+    "nav": [
+      {
+        "id": "inicio",
+        "label": "Inicio",
+        "path": ""
+      },
+      {
+        "id": "productos",
+        "label": "Productos",
+        "path": "#productos"
+      },
+      {
+        "id": "beneficios",
+        "label": "Beneficios Clínicos",
+        "path": "#beneficios"
+      },
+      {
+        "id": "donde-comprar",
+        "label": "Dónde Comprar",
+        "path": "#donde-comprar"
+      },
+      {
+        "id": "faq",
+        "label": "Preguntas Frecuentes",
+        "path": "#faq"
+      }
+    ],
+    "footer": {
+      "rights": "© 2024 BroncoMiel & Broncolito. Todos los derechos reservados.",
+      "brand": {
+        "logoAlt": "Logo de BroncoMiel",
+        "description": "Fórmulas respiratorias tradicionales enriquecidas con miel pura y propóleo de alta potencia para el alivio y cuidado de toda la familia.",
+        "extractBadge": "100% Extractos Naturales"
+      },
+      "productsColumn": {
+        "title": "PRODUCTOS",
+        "links": [
+          {
+            "label": "BroncoMiel Jarabe Adultos",
+            "href": "/es/productos/broncomiel-jarabe-miel-y-propoleo-8-oz"
+          },
+          {
+            "label": "Broncolito Jarabe Infantil",
+            "href": "/es/productos/broncolito-jarabe-infantil-8-oz"
+          },
+          {
+            "label": "Té Herbal Caliente",
+            "href": "/es/productos/te-herbal-caliente-broncomiel"
+          },
+          {
+            "label": "Broncolito Tapa Dosificadora",
+            "href": "/es/productos/broncolito-bote-con-tapa-dosificadora"
+          }
+        ]
+      },
+      "careColumn": {
+        "title": "CUIDADO INVERNAL",
+        "links": [
+          {
+            "label": "Guía de Alivio Natural",
+            "href": "/es#beneficios"
+          },
+          {
+            "label": "Prevención Respiratoria",
+            "href": "/es#beneficios"
+          },
+          {
+            "label": "Uso y Dosificación",
+            "href": "/es#faq"
+          },
+          {
+            "label": "Puntos de Venta",
+            "href": "/es#donde-comprar"
+          }
+        ]
+      },
+      "officialChannelColumn": {
+        "title": "CANAL OFICIAL",
+        "description": "Adquiere BroncoMiel con total garantía y entrega inmediata a través de nuestra tienda autorizada.",
+        "ctaButton": {
+          "label": "Visitar Tienda en Amazon",
+          "url": "https://www.amazon.com"
+        }
+      },
+      "copyright": "© 2024 BroncoMiel & Broncolito. Todos los derechos reservados.",
+      "fdaDisclaimer": "Estas declaraciones no han sido evaluadas por la FDA. Este producto no intenta diagnosticar, tratar, curar ni prevenir ninguna enfermedad."
+    },
+    "switchLang": {
+      "label": "English",
+      "code": "EN",
+      "flag": "🇺🇸"
+    }
+  },
+  "en": {
+    "navbar": {
+      "logoAlt": "BroncoMiel Logo",
+      "menuToggleAria": "Toggle mobile navigation"
+    },
+    "nav": [
+      {
+        "id": "home",
+        "label": "Home",
+        "path": ""
+      },
+      {
+        "id": "products",
+        "label": "Products",
+        "path": "#productos"
+      },
+      {
+        "id": "benefits",
+        "label": "Clinical Benefits",
+        "path": "#beneficios"
+      },
+      {
+        "id": "where-to-buy",
+        "label": "Where to Buy",
+        "path": "#donde-comprar"
+      },
+      {
+        "id": "faq",
+        "label": "FAQ",
+        "path": "#faq"
+      }
+    ],
+    "footer": {
+      "rights": "© 2024 BroncoMiel & Broncolito. All rights reserved.",
+      "brand": {
+        "logoAlt": "BroncoMiel Logo",
+        "description": "Traditional respiratory wellness formulas enriched with pure raw honey and high-potency propolis for natural relief and family care.",
+        "extractBadge": "100% Natural Extracts"
+      },
+      "productsColumn": {
+        "title": "PRODUCTS",
+        "links": [
+          {
+            "label": "BroncoMiel Adult Syrup",
+            "href": "/en/productos/broncomiel-jarabe-miel-y-propoleo-8-oz"
+          },
+          {
+            "label": "Broncolito Kids Syrup",
+            "href": "/en/productos/broncolito-jarabe-infantil-8-oz"
+          },
+          {
+            "label": "Hot Herbal Tea",
+            "href": "/en/productos/te-herbal-caliente-broncomiel"
+          },
+          {
+            "label": "Broncolito Dosing Cap Bottle",
+            "href": "/en/productos/broncolito-bote-con-tapa-dosificadora"
+          }
+        ]
+      },
+      "careColumn": {
+        "title": "WINTER CARE",
+        "links": [
+          {
+            "label": "Natural Relief Guide",
+            "href": "/en#beneficios"
+          },
+          {
+            "label": "Respiratory Prevention",
+            "href": "/en#beneficios"
+          },
+          {
+            "label": "Usage & Dosage",
+            "href": "/en#faq"
+          },
+          {
+            "label": "Store Locator",
+            "href": "/en#donde-comprar"
+          }
+        ]
+      },
+      "officialChannelColumn": {
+        "title": "OFFICIAL STORE",
+        "description": "Purchase authentic BroncoMiel with complete warranty and fast shipping through our authorized store.",
+        "ctaButton": {
+          "label": "Visit Amazon Store",
+          "url": "https://www.amazon.com"
+        }
+      },
+      "copyright": "© 2024 BroncoMiel & Broncolito. All rights reserved.",
+      "fdaDisclaimer": "These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease."
+    },
+    "switchLang": {
+      "label": "Español",
+      "code": "ES",
+      "flag": "🇲🇽"
+    }
+  }
+}

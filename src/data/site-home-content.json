@@ -1,0 +1,286 @@
+{
+  "es": {
+    "brandName": "BroncoMiel | Alivio Natural y Protección Respiratoria",
+    "meta": {
+      "title": "BroncoMiel | Alivio Natural y Protección Respiratoria para el Invierno",
+      "description": "Fórmula enriquecida con miel cruda pura y propóleo concentrado, pensada para suavizar la garganta y proteger las vías respiratorias en épocas frías."
+    },
+    "hero": {
+      "badge": "Fórmula Tradicional & Ciencia Botánica",
+      "title": "Alivio natural y protección respiratoria para el invierno.",
+      "subtitle": "Fórmula enriquecida con miel cruda pura y propóleo concentrado, pensada para suavizar la garganta y proteger las vías respiratorias en épocas frías.",
+      "ctaCatalog": "Ver catálogo de productos",
+      "ctaLocator": "Dónde encontrar"
+    },
+    "whyChoose": {
+      "title": "¿Por qué elegir Broncomiel este invierno?",
+      "subtitle": "Tres pilares botánicos y de formulación clínica que respaldan la preferencia de miles de familias cada temporada.",
+      "mascotAlt": "Abeja Broncomiel con bufanda y gorro de invierno",
+      "pillars": [
+        {
+          "id": "puroNatural",
+          "iconId": "honey",
+          "title": "100% Miel Cruda y Propóleo Puro",
+          "description": "Ingredientes botánicos seleccionados por sus propiedades antioxidantes y protectoras que suavizan naturalmente la garganta irritada."
+        },
+        {
+          "id": "eficaciaFormulada",
+          "iconId": "shield",
+          "title": "Eficacia Formulada",
+          "description": "Combinación equilibrada de extractos de eucalipto, gordolobo y saúco para reconfortar las vías respiratorias sin causar somnolencia."
+        },
+        {
+          "id": "paraTodaFamilia",
+          "iconId": "family",
+          "title": "Para Toda la Familia",
+          "description": "Fórmulas especializadas para adultos y la línea infantil Broncolito, seguras, suaves y con un sabor agradable que les encanta."
+        }
+      ]
+    },
+    "featuredProducts": {
+      "id": "productos",
+      "title": "Nuestros Productos",
+      "subtitle": "Conoce nuestra línea completa de soluciones respiratorias formuladas con miel y extractos botánicos.",
+      "viewProductBtn": "Ver Producto",
+      "buyAmazonBtn": "Comprar en Amazon"
+    },
+    "familyBanner": {
+      "title": "Protección natural para toda la familia",
+      "subtitle": "Desde los pequeños del hogar hasta los abuelos, fórmulas botánicas diseñadas para cuidar y confortar en cada temporada de frío.",
+      "altImage": "Familia feliz protegida con Broncomiel",
+      "ctaText": "Conoce la Línea Infantil"
+    },
+    "reviews": {
+      "ratingValue": "4.8",
+      "starsLabel": "★★★★★",
+      "totalReviews": "(1,420+ reseñas verificadas)",
+      "amazonLogoAlt": "Amazon Reviews",
+      "items": [
+        {
+          "author": "María González",
+          "verifiedText": "Compra verificada",
+          "date": "15 Nov 2024",
+          "rating": 5,
+          "title": "El mejor jarabe para el invierno",
+          "quote": "Mi familia y yo siempre tenemos un frasco en casa. Calma la carraspera y el sabor a miel natural es insuperable. Indispensable en temporada de frío."
+        },
+        {
+          "author": "Carlos Ramírez",
+          "verifiedText": "Compra verificada",
+          "date": "28 Oct 2024",
+          "rating": 5,
+          "title": "Efectivo y no produce somnolencia",
+          "quote": "Lo tomo durante el día en el trabajo y me alivia la garganta al instante sin provocar nada de sueño. Muy buena fórmula natural."
+        },
+        {
+          "author": "Sofía Morales",
+          "verifiedText": "Compra verificada",
+          "date": "04 Dic 2024",
+          "rating": 5,
+          "title": "A mis hijos les encanta Broncolito",
+          "quote": "Es el único jarabe que mis pequeños toman sin protestar. Suave, con sabor dulce agradable y reconforta de inmediato su pecho."
+        }
+      ]
+    },
+    "storeLocator": {
+      "id": "donde-comprar",
+      "title": "Encuentra Broncomiel cerca de ti",
+      "subtitle": "Disponible en las principales cadenas de farmacias y supermercados de todo el país.",
+      "searchPlaceholder": "Ingresa tu código postal o ciudad...",
+      "searchBtn": "Buscar Tienda",
+      "mapAlt": "Mapa esquemático con marcadores de farmacias",
+      "stores": [
+        {
+          "name": "Walgreens Pharmacy #4821",
+          "address": "1200 S Michigan Ave, Chicago, IL 60605",
+          "status": "En stock"
+        },
+        {
+          "name": "CVS Pharmacy #1042",
+          "address": "750 N State St, Chicago, IL 60610",
+          "status": "En stock"
+        },
+        {
+          "name": "Walmart Supercenter #3210",
+          "address": "4650 W North Ave, Chicago, IL 60639",
+          "status": "En stock"
+        },
+        {
+          "name": "Farmacia San Rafael",
+          "address": "3124 W 26th St, Chicago, IL 60623",
+          "status": "En stock"
+        }
+      ]
+    },
+    "faq": {
+      "id": "faq",
+      "title": "Uso responsable y dosificación",
+      "subtitle": "Respuestas claras a las dudas más comunes sobre la administración de Broncomiel.",
+      "mascotAlt": "Abeja Broncomiel con dudas y gorro de invierno",
+      "items": [
+        {
+          "id": "faq-age",
+          "question": "¿A partir de qué edad se puede tomar BroncoMiel y Broncolito?",
+          "answer": "BroncoMiel para adultos está formulado para personas a partir de los 12 años. Para niños a partir de los 2 años, recomendamos Broncolito Infantil con dosificación suave y sabor adaptado. Recuerda que nunca se deben administrar productos con miel a bebés menores de 1 año."
+        },
+        {
+          "id": "faq-drowsiness",
+          "question": "¿BroncoMiel produce somnolencia o sueño?",
+          "answer": "No. Nuestras fórmulas están elaboradas exclusivamente con miel de abeja pura, propóleo y extractos botánicos naturales, sin antihistamínicos ni agentes sedantes sintéticos, por lo que puedes consumirlo durante el día con total normalidad."
+        },
+        {
+          "id": "faq-combinations",
+          "question": "¿Puedo combinar BroncoMiel con otros medicamentos o tratamientos?",
+          "answer": "BroncoMiel es un suplemento alimenticio a base de extractos botánicos. Si estás tomando medicamentos bajo prescripción médica para afecciones respiratorias crónicas, te sugerimos consultar con tu médico o farmacéutico de confianza."
+        },
+        {
+          "id": "faq-expiration",
+          "question": "¿Cómo debo conservar el producto una vez abierto y cuál es su caducidad?",
+          "answer": "Conserva el frasco en un lugar fresco y seco, protegido de la luz solar directa y con la tapa bien cerrada. La fecha de caducidad está impresa en la base del envase y en el empaque exterior; una vez abierto, se recomienda consumir antes de 90 días."
+        }
+      ]
+    }
+  },
+  "en": {
+    "brandName": "BroncoMiel | Natural Relief and Respiratory Protection",
+    "meta": {
+      "title": "BroncoMiel | Natural Relief & Respiratory Protection for Winter",
+      "description": "Enriched formula with pure raw honey and concentrated propolis, crafted to soothe the throat and protect airways in cold weather."
+    },
+    "hero": {
+      "badge": "Traditional Formula & Botanical Science",
+      "title": "Natural relief and respiratory protection for winter.",
+      "subtitle": "Enriched formula with pure raw honey and concentrated propolis, crafted to soothe the throat and protect airways in cold weather.",
+      "ctaCatalog": "View product catalog",
+      "ctaLocator": "Where to find"
+    },
+    "whyChoose": {
+      "title": "Why choose Broncomiel this winter?",
+      "subtitle": "Three botanical and clinically formulated pillars supporting the trust of thousands of families each season.",
+      "mascotAlt": "Broncomiel bee mascot with scarf and winter beanie",
+      "pillars": [
+        {
+          "id": "puroNatural",
+          "iconId": "honey",
+          "title": "100% Pure Raw Honey & Propolis",
+          "description": "Selected botanical ingredients known for antioxidant and protective qualities that naturally soothe throat irritation."
+        },
+        {
+          "id": "eficaciaFormulada",
+          "iconId": "shield",
+          "title": "Clinically Balanced Efficacy",
+          "description": "A harmonious blend of eucalyptus, mullein, and elderberry extracts to comfort respiratory airways without daytime drowsiness."
+        },
+        {
+          "id": "paraTodaFamilia",
+          "iconId": "family",
+          "title": "Formulated for the Whole Family",
+          "description": "Specialized formulas for adults alongside Broncolito Kids, safe, gentle, and featuring a delicious natural flavor children love."
+        }
+      ]
+    },
+    "featuredProducts": {
+      "id": "productos",
+      "title": "Our Products",
+      "subtitle": "Discover our complete line of respiratory wellness solutions formulated with honey and botanical extracts.",
+      "viewProductBtn": "View Product",
+      "buyAmazonBtn": "Buy on Amazon"
+    },
+    "familyBanner": {
+      "title": "Natural protection for the whole family",
+      "subtitle": "From the little ones to grandparents, botanical formulas designed to care and comfort throughout the cold season.",
+      "altImage": "Happy family protected with Broncomiel",
+      "ctaText": "Discover Broncolito Kids"
+    },
+    "reviews": {
+      "ratingValue": "4.8",
+      "starsLabel": "★★★★★",
+      "totalReviews": "(1,420+ verified reviews)",
+      "amazonLogoAlt": "Amazon Reviews",
+      "items": [
+        {
+          "author": "Maria Gonzalez",
+          "verifiedText": "Verified purchase",
+          "date": "Nov 15, 2024",
+          "rating": 5,
+          "title": "Best syrup for winter",
+          "quote": "My family and I always keep a bottle at home. It calms scratchy throats and the natural honey flavor is unbeatable. A winter essential."
+        },
+        {
+          "author": "Carlos Ramirez",
+          "verifiedText": "Verified purchase",
+          "date": "Oct 28, 2024",
+          "rating": 5,
+          "title": "Effective with zero drowsiness",
+          "quote": "I take it during workdays and it instantly soothes my throat without causing any drowsiness. Excellent natural formula."
+        },
+        {
+          "author": "Sofia Morales",
+          "verifiedText": "Verified purchase",
+          "date": "Dec 04, 2024",
+          "rating": 5,
+          "title": "My kids love Broncolito",
+          "quote": "It is the only syrup my kids take without complaining. Gentle, sweet tasting, and brings quick comfort to their chest."
+        }
+      ]
+    },
+    "storeLocator": {
+      "id": "donde-comprar",
+      "title": "Find Broncomiel near you",
+      "subtitle": "Available at major pharmacy and grocery chains nationwide.",
+      "searchPlaceholder": "Enter your zip code or city...",
+      "searchBtn": "Find Stores",
+      "mapAlt": "Schematic map with pharmacy markers",
+      "stores": [
+        {
+          "name": "Walgreens Pharmacy #4821",
+          "address": "1200 S Michigan Ave, Chicago, IL 60605",
+          "status": "In stock"
+        },
+        {
+          "name": "CVS Pharmacy #1042",
+          "address": "750 N State St, Chicago, IL 60610",
+          "status": "In stock"
+        },
+        {
+          "name": "Walmart Supercenter #3210",
+          "address": "4650 W North Ave, Chicago, IL 60639",
+          "status": "In stock"
+        },
+        {
+          "name": "Farmacia San Rafael",
+          "address": "3124 W 26th St, Chicago, IL 60623",
+          "status": "In stock"
+        }
+      ]
+    },
+    "faq": {
+      "id": "faq",
+      "title": "Responsible use and dosage",
+      "subtitle": "Clear answers to the most common questions regarding Broncomiel administration.",
+      "mascotAlt": "Broncomiel bee mascot with questions and winter beanie",
+      "items": [
+        {
+          "id": "faq-age",
+          "question": "At what age can BroncoMiel and Broncolito be taken?",
+          "answer": "BroncoMiel adult syrup is formulated for individuals aged 12 and older. For children aged 2 and up, we recommend Broncolito Kids with gentle dosing and kid-friendly taste. Honey-based products must never be given to infants under 1 year of age."
+        },
+        {
+          "id": "faq-drowsiness",
+          "question": "Does BroncoMiel cause daytime drowsiness?",
+          "answer": "No. Our formulas are made exclusively with pure honey, propolis, and natural botanical extracts, without antihistamines or synthetic sedatives, so you can take it during the day without disruption."
+        },
+        {
+          "id": "faq-combinations",
+          "question": "Can I combine BroncoMiel with other medications or treatments?",
+          "answer": "BroncoMiel is a dietary supplement formulated with botanical extracts. If you are taking prescription drugs for chronic respiratory conditions, we recommend consulting your healthcare provider or pharmacist."
+        },
+        {
+          "id": "faq-expiration",
+          "question": "How should the product be stored once opened and what is its shelf life?",
+          "answer": "Store the bottle in a cool, dry place away from direct sunlight, with the cap securely tightened. The expiration date is printed on the bottom of the bottle and outer packaging; once opened, we recommend finishing within 90 days."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green-dark: #072113;
+  --color-brand-green-primary: #0c361e;
+  --color-brand-green-surface: #114328;
+  --color-brand-green-light: #e8f5ec;
+  --color-brand-green-border: #c2e2cc;
+  --color-brand-amber: #f59e0b;
+  --color-brand-amber-hover: #d97706;
+  --color-brand-amber-light: #fef3c7;
+}
+
+:root {
+  --color-brand-green-dark: #072113;
+  --color-brand-green-primary: #0c361e;
+  --color-brand-green-surface: #114328;
+  --color-brand-green-light: #e8f5ec;
+  --color-brand-green-border: #c2e2cc;
+  --color-brand-amber: #f59e0b;
+  --color-brand-amber-hover: #d97706;
+  --color-brand-amber-light: #fef3c7;
+}
+
+/* Custom utility classes */
+.bg-brand-hero {
+  background: linear-gradient(135deg, #072113 0%, #0c361e 50%, #114328 100%);
+}
+
+.bg-brand-dark-section {
+  background: linear-gradient(180deg, #0c361e 0%, #072113 100%);
+}
+
+.bg-brand-locator {
+  background: linear-gradient(180deg, #072113 0%, #114328 75%, rgba(245, 158, 11, 0.18) 100%);
+}
+
+.card-product {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  border: 1px solid var(--color-brand-green-border);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  border-color: var(--color-brand-amber);
+}
+
+.btn-primary-amber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--color-brand-green-dark);
+  background-color: var(--color-brand-amber);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary-amber:hover {
+  background-color: var(--color-brand-amber-hover);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary-amber:active {
+  transform: scale(0.98);
+}
+
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: #ffffff;
+}
+
+.btn-outline-white:active {
+  transform: scale(0.98);
+}
+
+.btn-outline-green {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--color-brand-green-primary);
+  background-color: rgba(232, 245, 236, 0.5);
+  border: 1px solid var(--color-brand-green-border);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-outline-green:hover {
+  background-color: var(--color-brand-green-light);
+  border-color: var(--color-brand-green-primary);
+}
+
+.btn-outline-green:active {
+  transform: scale(0.98);
+}
+
+.badge-pill-botanical {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: var(--color-brand-green-primary);
+  background-color: var(--color-brand-green-light);
+  border: 1px solid var(--color-brand-green-border);
+}

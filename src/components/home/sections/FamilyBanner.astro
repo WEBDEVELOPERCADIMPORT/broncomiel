@@ -1,0 +1,61 @@
+---
+import type { Lang } from "../../../i18n/config.i18n";
+import homeContent from "../../../data/site-home-content.json";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = homeContent[lang] ?? homeContent.es;
+const banner = t.familyBanner;
+---
+
+<section class="py-12 sm:py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative overflow-hidden rounded-3xl bg-brand-green-surface shadow-xl border border-brand-green-border/30">
+      
+      <!-- Background Banner Image -->
+      <img
+        src="/images/home/family-protection-banner.png"
+        alt={banner.altImage}
+        width="1200"
+        height="450"
+        class="absolute inset-0 w-full h-full object-cover object-center mix-blend-overlay opacity-40 sm:opacity-50"
+        loading="lazy"
+      />
+
+      <div class="relative z-10 p-8 sm:p-12 md:p-16 max-w-2xl text-white space-y-6">
+        
+        <!-- Dual Brand Badges -->
+        <div class="flex items-center gap-2 flex-wrap">
+          <span class="badge-pill-botanical !bg-white/90 !text-brand-green-dark !border-white/40 shadow-xs font-bold">
+            🍯 BroncoMiel
+          </span>
+          <span class="badge-pill-botanical !bg-brand-amber !text-brand-green-dark !border-brand-amber font-bold shadow-xs">
+            🐝 Broncolito Infantil
+          </span>
+        </div>
+
+        <!-- Banner Title -->
+        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight text-white leading-tight">
+          {banner.title}
+        </h2>
+
+        <!-- Banner Subtitle -->
+        <p class="text-sm sm:text-base text-brand-green-light leading-relaxed">
+          {banner.subtitle}
+        </p>
+
+        <!-- Banner CTA Button -->
+        <div class="pt-2">
+          <a href="#productos" class="btn-primary-amber inline-flex">
+            {banner.ctaText}
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

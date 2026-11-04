@@ -1,0 +1,92 @@
+---
+import type { Lang } from "../../../i18n/config.i18n";
+import homeContent from "../../../data/site-home-content.json";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = homeContent[lang] ?? homeContent.es;
+const why = t.whyChoose;
+
+const getPillarSvg = (iconId: string) => {
+  switch (iconId) {
+    case "honey":
+      return `
+        <svg class="w-8 h-8 text-brand-amber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+          <circle cx="12" cy="12" r="4" />
+        </svg>
+      `;
+    case "shield":
+      return `
+        <svg class="w-8 h-8 text-brand-green-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+      `;
+    case "family":
+    default:
+      return `
+        <svg class="w-8 h-8 text-brand-green-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+          <circle cx="9" cy="7" r="4" />
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+          <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </svg>
+      `;
+  }
+};
+---
+
+<section id="beneficios" class="py-20 sm:py-24 bg-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header with Mascot -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-16">
+      <div class="text-center md:text-left max-w-2xl">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-green-dark tracking-tight mb-4">
+          {why.title}
+        </h2>
+        <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+          {why.subtitle}
+        </p>
+      </div>
+
+      <!-- Winter Mascot Slot -->
+      <div class="shrink-0 flex items-center justify-center">
+        <img
+          src="/images/home/mascot-winter.png"
+          alt={why.mascotAlt}
+          width="220"
+          height="220"
+          class="w-36 sm:w-44 md:w-52 h-auto object-contain filter drop-shadow-md transition-transform duration-300 hover:rotate-2"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- 3 Pillars Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        why.pillars.map((pillar) => (
+          <div class="card-product p-8 flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-2xl bg-brand-green-light border border-brand-green-border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Fragment set:html={getPillarSvg(pillar.iconId)} />
+            </div>
+
+            <h3 class="text-xl font-bold text-brand-green-dark mb-3">
+              {pillar.title}
+            </h3>
+
+            <p class="text-sm text-gray-600 leading-relaxed">
+              {pillar.description}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+  </div>
+</section>

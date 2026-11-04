@@ -1,0 +1,62 @@
+---
+import type { Lang } from "../../../i18n/config.i18n";
+import homeContent from "../../../data/site-home-content.json";
+import HeroCarousel from "../components/HeroCarousel.astro";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = homeContent[lang] ?? homeContent.es;
+const hero = t.hero;
+---
+
+<section class="relative bg-brand-hero text-white overflow-hidden py-16 sm:py-24 lg:py-28">
+  <!-- Subtle decorative background blur -->
+  <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand-amber/15 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-green-surface/60 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Left Content Column -->
+      <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+        
+        <!-- Botanical Badge -->
+        <div>
+          <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold text-brand-green-dark bg-brand-amber-light border border-brand-amber/30 shadow-xs">
+            🍯 {hero.badge}
+          </span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          {hero.title}
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="text-base sm:text-lg text-brand-green-light max-w-2xl mx-auto lg:mx-0 leading-relaxed font-normal">
+          {hero.subtitle}
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <a href="#productos" class="btn-primary-amber w-full sm:w-auto">
+            {hero.ctaCatalog}
+          </a>
+          <a href="#donde-comprar" class="btn-outline-white w-full sm:w-auto">
+            {hero.ctaLocator}
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Visual Column (Hero Carousel with Floating Bottles) -->
+      <div class="lg:col-span-5 w-full">
+        <HeroCarousel altText={hero.title} />
+      </div>
+
+    </div>
+  </div>
+</section>

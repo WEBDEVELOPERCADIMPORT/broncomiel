@@ -1,0 +1,30 @@
+{
+  "es": {
+    "breadcrumbHome": "Inicio",
+    "breadcrumbCatalog": "Catálogo de Productos",
+    "breadcrumbCategory": "Jarabes",
+    "skuLabel": "SKU:",
+    "presentationLabel": "Presentación:",
+    "buyAmazonBtn": "Comprar en Amazon",
+    "viewProductBtn": "Ver Producto",
+    "relatedTitle": "Completa tu Botiquín de Invierno",
+    "relatedSubtitle": "Combinaciones ideales para proteger a toda la familia de los cambios bruscos de clima.",
+    "viewAllCatalog": "Ver todo el catálogo",
+    "backToCatalog": "Volver a productos",
+    "guaranteeBadge": "Garantía de Calidad BroncoMiel"
+  },
+  "en": {
+    "breadcrumbHome": "Home",
+    "breadcrumbCatalog": "Product Catalog",
+    "breadcrumbCategory": "Syrups",
+    "skuLabel": "SKU:",
+    "presentationLabel": "Size:",
+    "buyAmazonBtn": "Buy on Amazon",
+    "viewProductBtn": "View Product",
+    "relatedTitle": "Complete Your Winter First-Aid Kit",
+    "relatedSubtitle": "Ideal combinations to protect the whole family against sudden weather changes.",
+    "viewAllCatalog": "View full catalog",
+    "backToCatalog": "Back to products",
+    "guaranteeBadge": "BroncoMiel Quality Guarantee"
+  }
+}
