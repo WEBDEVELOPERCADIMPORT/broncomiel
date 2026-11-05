@@ -117,15 +117,16 @@ src/
 
 | Módulo / Capa | Directorio / Archivo | Estado | Descripción |
 | :--- | :--- | :--- | :--- |
-| **Global Layout & SEO** | `src/layouts/Layout.astro` | Activo | Plantilla base con Open Graph, Twitter Cards, `ClientRouter` y JSON-LD. |
+| **Global Layout & SEO** | `src/layouts/Layout.astro` | Activo | Plantilla base con Open Graph, Twitter Cards, `ClientRouter`, metadatos de BroncoMiel y JSON-LD. |
 | **Internacionalización** | `src/i18n/` | Activo | Idiomas `es` y `en` con helpers de traducción y rutas. |
-| **Navbar & Footer** | `src/components/common/` | Activo | Navegación global con soporte para submenús y enlaces i18n. |
-| **Reviews Component** | `src/components/common/Reviews.astro` | Activo | Carrusel de reseñas interactivo con soporte `astro:page-load`. |
-| **Reviews Action & Data** | `src/actions/reviews/`, `src/data/reviews/` | Activo | Acción `getReviews` y fuente local `reviews.json`. |
-| **Home Page** | `src/pages/[lang]/index.astro` | Activo | Página principal de bienvenida conectada con `site-example-content.json`. |
+| **Navbar & Footer** | `src/components/common/` | Activo | Navegación global con logo de marca, selector ES/EN, enlaces de catálogo, canal oficial de Amazon y disclaimer FDA. |
+| **Amazon Review Card** | `src/components/common/ReviewCard.astro` | Activo | Tarjeta atómica reutilizable de review de Amazon con rating, verificación y mascota de la abeja. |
+| **Product Actions & Data**| `src/actions/products/`, `src/data/products/` | Activo | Acciones `getFeaturedProducts`, `getProductBySlug`, `getRelatedProducts` y catálogo `products.data.json`. |
+| **Home Page (7 Secciones)** | `src/pages/[lang]/index.astro`, `src/components/home/` | Activo | Hero, WhyChoose, FeaturedProducts (#productos), FamilyBanner, ReviewsSection, StoreLocator (#donde-comprar) y FaqSection (#faq). |
+| **Ficha de Producto** | `src/pages/[lang]/[product]/index.astro`, `src/components/product/` | Activo | Ficha técnica directa a dos niveles, Breadcrumb, ProductGallery, ProductBadges, ProductDetail y RelatedProducts. |
 | **Error Handling** | `src/pages/404.astro` | Activo | Vista estándar 404 para rutas o idiomas inválidos. |
-| **Sitemap Dinámico** | `src/utils/seo/sitemapUrls.ts` | Activo | Inyección de URLs localizadas en `@astrojs/sitemap`. |
-| **Base de Datos (Extensible)** | `src/db/` | Configurado | Estructura base para conectar clientes ORM / SQL según se requiera. |
+| **Sitemap Dinámico** | `src/utils/seo/sitemapUrls.ts` | Activo | Inyección de URLs localizadas para Home y todos los productos (`https://broncomiel.com/`). |
+| **Estilos Centralizados** | `src/styles/global.css` | Activo | Tokens de color `@theme`, clases de gradientes, botones primarios ámbar y badges botánicos. |
 
 ---
 
@@ -167,3 +168,11 @@ src/
 | Fecha | Identificador | Capa | Resumen del Cambio | Verificado Por |
 | :--- | :--- | :--- | :--- | :--- |
 | 2026-10-26 | `#Init-AutoUI-Agents` | Sistema de Agentes | Reconfiguración completa del ecosistema multi-agente (`manager`, `coder`, `tester`), catálogo de skills (`create-data`, `create-action`, `create-component`, `create-page`), actualización de `MEMORY.md`, `AGENTS.md` y `CLAUDE.md` orientados al starter kit AutoUI (Astro, Tailwind CSS v4, i18n, Cloudflare). | Manager AutoUI |
+| 2026-11-04 | `#BroncoMiel-Launch` | Full-Stack AutoUI | Implementación completa de BroncoMiel en 2 niveles (Home y Ficha de Producto). Capa de datos simétrica es/en en JSON, Server Actions Zod (`getFeaturedProducts`, `getProductBySlug`, `getRelatedProducts`), diseño idéntico al mockup con variables centralizadas en `global.css`, cero textos hardcodeados y tipado TypeScript estricto. | Tester AutoUI (VERIFIED) |
+| 2026-11-04 | `#BroncoMiel-Refinements` | UI & Data Refactor | Integración de `Reviews.astro` con logo de Amazon y eliminación de componentes redundantes. Implementación de carrusel interactivo en `FeaturedProducts.astro` con enlace al detalle de producto. Aplicación del gradiente diagonal exacto (`.bg-brand-diagonal-gradient`) a productos y localizador de tiendas. Reestructuración de `products.data.json` a `{ "products": { "es": [...], "en": [...] } }` con soporte de `lang` en Server Actions. | Tester AutoUI (VERIFIED) |
+| 2026-11-05 | `#Product-Schema-UX` | Schema & Card UX | Eliminación de `price`, `title` y `subtitle` en `products.data.json`, adopción de `name` y `description`. Truncado inteligente a 2 líneas (~90 chars) en las tarjetas de `FeaturedProducts` y `RelatedProducts`. Implementación de botón interactivo "Ver más" / "Ver menos" accesible en `ProductDetail.astro` conectado con diccionarios i18n y ciclo `astro:page-load`. | Tester AutoUI (VERIFIED) |
+| 2026-11-05 | `#HeroCarousel-NoBottles` | Visual Hero | Remoción de las botellas flotantes superpuestas en el carrusel del Hero (`HeroCarousel.astro`), dejando exclusivamente el slider de fotos familiares con transiciones e indicadores limpios. | Tester AutoUI (VERIFIED) |
+| 2026-11-05 | `#FamilyBanner-FullWidth` | Visual Banner | Actualización de `FamilyBanner.astro` a banner full-bleed panorámico completo usando `/images/home/family-broncomiel-banner.png` para cubrir toda la sección sin tarjetas ni textos superpuestos. | Tester AutoUI (VERIFIED) |
+| 2026-11-05 | `#StoreLocator-GoogleMaps` | Actions & Maps | Integración de la Server Action `getPlaces` (`places.json`), eliminación de badges de stock y sustitución del mapa estático por un iframe real de Google Maps con navegación dinámica por sucursal en `StoreLocator.astro`. | Tester AutoUI (VERIFIED) |
+| 2026-11-05 | `#Product-Remove-Presentation` | Schema & UI | Eliminación total de la propiedad `presentation` del archivo `products.data.json`, de la interfaz `ProductItem` y de todos los componentes visuales (`FeaturedProducts`, `ProductDetail`, `RelatedProducts`). | Tester AutoUI (VERIFIED) |
+| 2026-11-05 | `#Product-Remove-IsFeatured` | Schema & Action | Eliminación completa de `isFeatured` de `products.data.json`, del tipo `ProductItem` y actualización de `getFeaturedProducts` para retornar directamente los productos del catálogo. | Tester AutoUI (VERIFIED) |

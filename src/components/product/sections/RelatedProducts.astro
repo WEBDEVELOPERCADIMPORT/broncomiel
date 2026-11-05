@@ -1,0 +1,110 @@
+---
+import type { Lang } from "../../../i18n/config.i18n";
+import type { ProductItem } from "../../../actions/products/getFeaturedProducts.action";
+import productContent from "../../../data/site-product-content.json";
+
+interface Props {
+  relatedProducts: ProductItem[];
+  lang: Lang;
+}
+
+const { relatedProducts, lang } = Astro.props;
+const t = productContent[lang] ?? productContent.es;
+---
+
+<section class="py-16 sm:py-24 bg-gray-50/70 border-t border-brand-green-border/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 mb-12">
+      <div class="max-w-2xl">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-green-dark tracking-tight mb-2">
+          {t.relatedTitle}
+        </h2>
+        <p class="text-sm sm:text-base text-gray-600">
+          {t.relatedSubtitle}
+        </p>
+      </div>
+
+      <a
+        href={`/${lang}/#productos`}
+        class="text-sm font-semibold text-brand-green-primary hover:text-brand-amber transition-colors flex items-center gap-1.5 shrink-0"
+      >
+        <span>{t.viewAllCatalog}</span>
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- 3 Complementary Products Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        relatedProducts.map((product) => {
+          const localizedName = product.name;
+          const detailUrl = `/${lang}/${product.slug}`;
+
+          return (
+            <article class="card-product flex flex-col justify-between p-6 bg-white group">
+              <div>
+                <!-- Product Image Slot -->
+                <div class="aspect-square w-full rounded-2xl bg-gray-50 flex items-center justify-center p-4 mb-4 overflow-hidden">
+                  <a href={detailUrl} class="w-full h-full flex items-center justify-center">
+                    <img
+                      src={`/images/products/${product.slug}.png`}
+                      alt={localizedName}
+                      width="240"
+                      height="240"
+                      class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </a>
+                </div>
+
+                <!-- Category -->
+                <div class="flex items-center mb-2">
+                  <span class="badge-pill-botanical !py-0.5 !px-2 text-[11px] uppercase tracking-wider">
+                    {product.category}
+                  </span>
+                </div>
+
+                <!-- Product Name -->
+                <h3 class="text-base font-bold text-brand-green-dark mb-2 line-clamp-1">
+                  <a href={detailUrl} class="hover:text-brand-amber transition-colors">
+                    {localizedName}
+                  </a>
+                </h3>
+
+                <!-- Product Excerpt (truncated) -->
+                <p class="text-xs text-gray-600 line-clamp-2 leading-relaxed mb-6">
+                  {product.description.length > 90
+                    ? product.description.slice(0, 90).trim() + "..."
+                    : product.description}
+                </p>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="grid grid-cols-2 gap-2 pt-3 border-t border-brand-green-border/30">
+                <a
+                  href={detailUrl}
+                  class="btn-outline-green !py-2 !px-3 !text-xs text-center"
+                >
+                  {t.viewProductBtn}
+                </a>
+
+                <a
+                  href={product.amazonUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-primary-amber !py-2 !px-3 !text-xs text-center flex items-center justify-center gap-1"
+                >
+                  <span>🛒</span>
+                  <span>{t.buyAmazonBtn}</span>
+                </a>
+              </div>
+            </article>
+          );
+        })
+      }
+    </div>
+
+  </div>
+</section>

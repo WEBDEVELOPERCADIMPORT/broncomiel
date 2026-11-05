@@ -1,0 +1,94 @@
+---
+import type { Lang } from "../../../i18n/config.i18n";
+import homeContent from "../../../data/site-home-content.json";
+import FaqAccordionItem from "../components/FaqAccordionItem.astro";
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = homeContent[lang] ?? homeContent.es;
+const faq = t.faq;
+---
+
+<section id={faq.id} class="py-20 sm:py-28 bg-white relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2
+        class="text-3xl sm:text-4xl font-extrabold text-brand-green-dark tracking-tight mb-4"
+      >
+        {faq.title}
+      </h2>
+      <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+        {faq.subtitle}
+      </p>
+    </div>
+
+    <!-- Main Grid: Accordion Left, Mascot Right -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Accordion Items (Col 1-8) -->
+      <div class="lg:col-span-8 space-y-4">
+        {
+          faq.items.map((item, index) => (
+            <FaqAccordionItem
+              id={item.id}
+              question={item.question}
+              answer={item.answer}
+              isOpenDefault={index === 0}
+            />
+          ))
+        }
+      </div>
+
+      <!-- Mascot Column (Col 9-12) -->
+      <div
+        class="lg:col-span-4 flex flex-col items-center justify-center text-center"
+      >
+        <div class="relative p-6 rounded-3xl max-w-xs">
+          <img
+            src="/images/home/mascot-faq.png"
+            alt={faq.mascotAlt}
+            width="240"
+            height="280"
+            class="w-48 sm:w-56 h-auto object-contain mx-auto drop-shadow-md transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function setupFaqAccordion() {
+    const triggers =
+      document.querySelectorAll<HTMLButtonElement>(".faq-trigger");
+    triggers.forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const targetId = trigger.getAttribute("data-target");
+        if (!targetId) return;
+        const content = document.getElementById(targetId);
+        const iconSvg = trigger.querySelector(".faq-icon svg");
+        if (!content) return;
+
+        const isCurrentlyHidden = content.classList.contains("hidden");
+
+        // Toggle state
+        if (isCurrentlyHidden) {
+          content.classList.remove("hidden");
+          trigger.setAttribute("aria-expanded", "true");
+          iconSvg?.classList.add("rotate-180");
+        } else {
+          content.classList.add("hidden");
+          trigger.setAttribute("aria-expanded", "false");
+          iconSvg?.classList.remove("rotate-180");
+        }
+      });
+    });
+  }
+
+  setupFaqAccordion();
+  document.addEventListener("astro:page-load", setupFaqAccordion);
+</script>

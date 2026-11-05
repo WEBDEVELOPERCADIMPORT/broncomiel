@@ -10,7 +10,9 @@
       "title": "Alivio natural y protección respiratoria para el invierno.",
       "subtitle": "Fórmula enriquecida con miel cruda pura y propóleo concentrado, pensada para suavizar la garganta y proteger las vías respiratorias en épocas frías.",
       "ctaCatalog": "Ver catálogo de productos",
-      "ctaLocator": "Dónde encontrar"
+      "ctaLocator": "Dónde encontrar",
+      "carouselAdultsAlt": "BroncoMiel Jarabe de Miel y Propóleo para Adultos",
+      "carouselKidsAlt": "Broncolito Jarabe Infantil con Tapa Dosificadora"
     },
     "whyChoose": {
       "title": "¿Por qué elegir Broncomiel este invierno?",
@@ -51,10 +53,12 @@
       "ctaText": "Conoce la Línea Infantil"
     },
     "reviews": {
+      "sectionTitle": "¿Qué opinan las familias?",
       "ratingValue": "4.8",
       "starsLabel": "★★★★★",
       "totalReviews": "(1,420+ reseñas verificadas)",
       "amazonLogoAlt": "Amazon Reviews",
+      "customerSatisfaction": "Satisfacción de Clientes en Amazon",
       "items": [
         {
           "author": "María González",
@@ -89,6 +93,8 @@
       "searchPlaceholder": "Ingresa tu código postal o ciudad...",
       "searchBtn": "Buscar Tienda",
       "mapAlt": "Mapa esquemático con marcadores de farmacias",
+      "zoomInAria": "Acercar mapa",
+      "zoomOutAria": "Alejar mapa",
       "stores": [
         {
           "name": "Walgreens Pharmacy #4821",
@@ -152,7 +158,9 @@
       "title": "Natural relief and respiratory protection for winter.",
       "subtitle": "Enriched formula with pure raw honey and concentrated propolis, crafted to soothe the throat and protect airways in cold weather.",
       "ctaCatalog": "View product catalog",
-      "ctaLocator": "Where to find"
+      "ctaLocator": "Where to find",
+      "carouselAdultsAlt": "BroncoMiel Honey & Propolis Syrup for Adults",
+      "carouselKidsAlt": "Broncolito Children's Syrup with Dosing Cap"
     },
     "whyChoose": {
       "title": "Why choose Broncomiel this winter?",
@@ -193,10 +201,12 @@
       "ctaText": "Discover Broncolito Kids"
     },
     "reviews": {
+      "sectionTitle": "What Families Are Saying",
       "ratingValue": "4.8",
       "starsLabel": "★★★★★",
       "totalReviews": "(1,420+ verified reviews)",
       "amazonLogoAlt": "Amazon Reviews",
+      "customerSatisfaction": "Amazon Customer Satisfaction",
       "items": [
         {
           "author": "Maria Gonzalez",
@@ -231,6 +241,8 @@
       "searchPlaceholder": "Enter your zip code or city...",
       "searchBtn": "Find Stores",
       "mapAlt": "Schematic map with pharmacy markers",
+      "zoomInAria": "Zoom in map",
+      "zoomOutAria": "Zoom out map",
       "stores": [
         {
           "name": "Walgreens Pharmacy #4821",

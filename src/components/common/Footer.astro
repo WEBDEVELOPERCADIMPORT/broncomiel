@@ -13,34 +13,34 @@ const t = globalContent[lang] ?? globalContent.es;
 const footer = t.footer;
 ---
 
-<footer class="bg-brand-dark-section text-white pt-16 pb-12 mt-auto border-t border-brand-green-surface">
+<footer
+  class="bg-brand-dark-section text-white pt-16 pb-12 mt-auto border-t border-brand-green-surface"
+>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-12 border-b border-brand-green-surface/80">
-      
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-12 border-b border-brand-green-surface/80"
+    >
       <!-- Col 1: Brand Info -->
       <div class="space-y-4">
-        <a href={`/${lang}/`} class="inline-block transition hover:opacity-90">
+        <a href={`/${lang}/`} class="inline-block transition">
           <img
             src="/logo.png"
             alt={footer.brand.logoAlt}
             width="160"
             height="40"
-            class="w-auto h-10 object-contain brightness-0 invert"
+            class="w-auto h-10 object-contain"
           />
         </a>
         <p class="text-sm text-gray-300 leading-relaxed">
           {footer.brand.description}
         </p>
-        <div class="pt-2">
-          <span class="badge-pill-botanical">
-            🌱 {footer.brand.extractBadge}
-          </span>
-        </div>
       </div>
 
       <!-- Col 2: Products Column -->
       <div>
-        <h3 class="text-xs font-bold tracking-wider text-brand-amber uppercase mb-4">
+        <h3
+          class="text-xs font-bold tracking-wider text-brand-amber uppercase mb-4"
+        >
           {footer.productsColumn.title}
         </h3>
         <ul class="space-y-2.5">
@@ -61,7 +61,9 @@ const footer = t.footer;
 
       <!-- Col 3: Winter Care Column -->
       <div>
-        <h3 class="text-xs font-bold tracking-wider text-brand-amber uppercase mb-4">
+        <h3
+          class="text-xs font-bold tracking-wider text-brand-amber uppercase mb-4"
+        >
           {footer.careColumn.title}
         </h3>
         <ul class="space-y-2.5">
@@ -82,7 +84,9 @@ const footer = t.footer;
 
       <!-- Col 4: Official Channel Column -->
       <div class="space-y-4">
-        <h3 class="text-xs font-bold tracking-wider text-brand-amber uppercase mb-4">
+        <h3
+          class="text-xs font-bold tracking-wider text-brand-amber uppercase mb-4"
+        >
           {footer.officialChannelColumn.title}
         </h3>
         <p class="text-sm text-gray-300 leading-relaxed">
@@ -99,15 +103,18 @@ const footer = t.footer;
           </a>
         </div>
       </div>
-
     </div>
 
     <!-- Bottom Row: Copyright & FDA Disclaimer -->
-    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+    <div
+      class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400"
+    >
       <p class="text-center md:text-left">
         {footer.copyright}
       </p>
-      <p class="text-center md:text-right max-w-xl text-gray-400 leading-relaxed">
+      <p
+        class="text-center md:text-right max-w-xl text-gray-400 leading-relaxed"
+      >
         {footer.fdaDisclaimer}
       </p>
     </div>

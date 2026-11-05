@@ -11,9 +11,10 @@ export interface GetProductBySlugResult {
 export const getProductBySlug = defineAction({
   input: z.object({
     slug: z.string().min(1, 'Product slug is required'),
+    lang: z.enum(['es', 'en']).default('es'),
   }),
-  handler: async ({ slug }): Promise<GetProductBySlugResult> => {
-    const allProducts = (productsData.products || []) as ProductItem[];
+  handler: async ({ slug, lang }): Promise<GetProductBySlugResult> => {
+    const allProducts = (productsData.products[lang] || productsData.products.es) as ProductItem[];
     const product = allProducts.find((p) => p.slug === slug);
 
     if (!product) {

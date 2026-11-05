@@ -12,9 +12,10 @@ export const getRelatedProducts = defineAction({
   input: z.object({
     currentSlug: z.string().optional(),
     limit: z.number().default(3),
+    lang: z.enum(['es', 'en']).default('es'),
   }),
-  handler: async ({ currentSlug, limit }): Promise<GetRelatedProductsResult> => {
-    const allProducts = (productsData.products || []) as ProductItem[];
+  handler: async ({ currentSlug, limit, lang }): Promise<GetRelatedProductsResult> => {
+    const allProducts = (productsData.products[lang] || productsData.products.es) as ProductItem[];
     const filtered = currentSlug
       ? allProducts.filter((p) => p.slug !== currentSlug)
       : allProducts;

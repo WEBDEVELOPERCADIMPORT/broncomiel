@@ -13,11 +13,11 @@ const t = homeContent[lang] ?? homeContent.es;
 const section = t.featuredProducts;
 ---
 
-<section id={section.id} class="bg-brand-dark-section text-white py-20 sm:py-28 relative">
+<section id={section.id} class="bg-brand-diagonal-gradient text-white py-20 sm:py-28 relative overflow-hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Title & Subtitle -->
-    <div class="text-center max-w-3xl mx-auto mb-16">
+    <div class="text-center max-w-3xl mx-auto mb-14">
       <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
         {section.title}
       </h2>
@@ -26,76 +26,140 @@ const section = t.featuredProducts;
       </p>
     </div>
 
-    <!-- Product Cards Grid: 1 col on mobile, 2 on md, 4 on lg -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {
-        products.map((product) => {
-          const localizedTitle = product.title[lang] || product.title.es;
-          const localizedDesc = product.description[lang] || product.description.es;
-          const detailUrl = `/${lang}/productos/${product.slug}`;
+    <!-- Product Carousel Container -->
+    <div class="relative group product-carousel-container w-full">
+      <!-- Prev Button -->
+      <button
+        type="button"
+        class="prev-btn-product absolute left-2 lg:-left-6 top-1/2 -translate-y-1/2 -ml-4 lg:-ml-6 z-10 bg-white rounded-full p-2.5 shadow-xl border border-gray-100 text-brand-green-primary hover:bg-brand-green-light hover:scale-105 transition-all focus:outline-hidden"
+        aria-label="Anterior"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
 
-          return (
-            <article class="card-product flex flex-col justify-between overflow-hidden p-6 bg-white text-gray-900 group">
-              <div>
-                <!-- Product Image Slot -->
-                <div class="aspect-square w-full rounded-xl bg-gray-50 flex items-center justify-center p-4 mb-4 overflow-hidden">
-                  <img
-                    src={`/images/products/${product.slug}.png`}
-                    alt={localizedTitle}
-                    width="280"
-                    height="280"
-                    class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                  />
+      <!-- Scrollable Track -->
+      <div class="product-track flex overflow-x-hidden snap-x snap-mandatory gap-6 pb-8 pt-4 px-2 no-scrollbar scroll-smooth">
+        {
+          products.map((product) => {
+            const detailUrl = `/${lang}/${product.slug}`;
+
+            return (
+              <article
+                class="snap-center shrink-0 w-[300px] md:w-[340px] bg-white text-gray-900 rounded-3xl p-6 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-all cursor-pointer group"
+                onclick={`window.location.href='${detailUrl}'`}
+              >
+                <div>
+                  <!-- Product Image Slot -->
+                  <div class="aspect-square w-full rounded-2xl bg-gray-50 flex items-center justify-center p-4 mb-4 overflow-hidden">
+                    <a href={detailUrl} class="w-full h-full flex items-center justify-center">
+                      <img
+                        src={`/images/products/${product.slug}.png`}
+                        alt={product.name}
+                        width="280"
+                        height="280"
+                        class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
+
+                  <!-- Category -->
+                  <div class="flex items-center mb-2">
+                    <span class="badge-pill-botanical !py-0.5 !px-2.5 !text-[11px] uppercase tracking-wider">
+                      {product.category}
+                    </span>
+                  </div>
+
+                  <!-- Product Name -->
+                  <h3 class="text-base font-bold text-brand-green-dark mb-2 line-clamp-2 min-h-[3rem]">
+                    <a href={detailUrl} class="hover:text-brand-amber transition-colors">
+                      {product.name}
+                    </a>
+                  </h3>
+
+                  <!-- Product Short Description (truncated) -->
+                  <p class="text-xs text-gray-600 line-clamp-2 leading-relaxed mb-6">
+                    {product.description.length > 90
+                      ? product.description.slice(0, 90).trim() + "..."
+                      : product.description}
+                  </p>
                 </div>
 
-                <!-- Category & Price -->
-                <div class="flex items-center justify-between mb-2">
-                  <span class="badge-pill-botanical !py-0.5 !px-2.5 !text-[11px] uppercase tracking-wider">
-                    {product.category}
-                  </span>
-                  <span class="text-lg font-bold text-brand-green-primary">
-                    ${product.price.toFixed(2)}
-                  </span>
-                </div>
-
-                <!-- Product Title -->
-                <h3 class="text-base font-bold text-brand-green-dark mb-2 line-clamp-2">
-                  <a href={detailUrl} class="hover:text-brand-amber transition-colors">
-                    {localizedTitle}
+                <!-- Action CTAs -->
+                <div class="space-y-2 pt-2 border-t border-brand-green-border/30" onclick="event.stopPropagation()">
+                  <a
+                    href={detailUrl}
+                    class="btn-outline-green w-full !py-2 !text-xs text-center"
+                  >
+                    {section.viewProductBtn}
                   </a>
-                </h3>
 
-                <!-- Product Short Description -->
-                <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed mb-6">
-                  {localizedDesc}
-                </p>
-              </div>
+                  <a
+                    href={product.amazonUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-primary-amber w-full !py-2 !text-xs text-center flex items-center justify-center gap-1.5"
+                  >
+                    <span>🛒</span>
+                    <span>{section.buyAmazonBtn}</span>
+                  </a>
+                </div>
+              </article>
+            );
+          })
+        }
+      </div>
 
-              <!-- Action CTAs -->
-              <div class="space-y-2 pt-2 border-t border-brand-green-border/30">
-                <a
-                  href={detailUrl}
-                  class="btn-outline-green w-full !py-2 !text-xs text-center"
-                >
-                  {section.viewProductBtn}
-                </a>
-
-                <a
-                  href={product.amazonUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-primary-amber w-full !py-2 !text-xs text-center flex items-center justify-center gap-1.5"
-                >
-                  <span>🛒</span>
-                  <span>{section.buyAmazonBtn}</span>
-                </a>
-              </div>
-            </article>
-          );
-        })
-      }
+      <!-- Next Button -->
+      <button
+        type="button"
+        class="next-btn-product absolute right-2 lg:-right-6 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-6 z-10 bg-white rounded-full p-2.5 shadow-xl border border-gray-100 text-brand-green-primary hover:bg-brand-green-light hover:scale-105 transition-all focus:outline-hidden"
+        aria-label="Siguiente"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
     </div>
 
   </div>
 </section>
+
+<style>
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+<script>
+  function setupProductCarousels() {
+    const carousels = document.querySelectorAll(".product-carousel-container");
+
+    carousels.forEach((container) => {
+      const track = container.querySelector(".product-track");
+      const prevBtn = container.querySelector(".prev-btn-product");
+      const nextBtn = container.querySelector(".next-btn-product");
+
+      if (!track || !prevBtn || !nextBtn) return;
+
+      const scrollAmount = 340;
+
+      prevBtn.addEventListener("click", () => {
+        track.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      nextBtn.addEventListener("click", () => {
+        track.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+    });
+  }
+
+  setupProductCarousels();
+  document.addEventListener("astro:page-load", setupProductCarousels);
+</script>

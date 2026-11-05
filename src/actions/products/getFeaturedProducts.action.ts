@@ -1,9 +1,10 @@
 import { defineAction } from 'astro:actions';
+import { z } from 'astro:schema';
 import productsData from '../../data/products/products.data.json';
 
 export interface ProductBadge {
   id: string;
-  label: Record<string, string>;
+  label: string;
   icon: string;
 }
 
@@ -12,15 +13,11 @@ export interface ProductItem {
   slug: string;
   sku: string;
   category: string;
-  price: number;
   amazonUrl: string;
-  presentation: Record<string, string>;
   image: string;
-  title: Record<string, string>;
-  subtitle: Record<string, string>;
-  description: Record<string, string>;
+  name: string;
+  description: string;
   badges: ProductBadge[];
-  isFeatured: boolean;
 }
 
 export interface GetFeaturedProductsResult {
@@ -29,13 +26,18 @@ export interface GetFeaturedProductsResult {
 }
 
 export const getFeaturedProducts = defineAction({
-  handler: async (): Promise<GetFeaturedProductsResult> => {
-    const allProducts = (productsData.products || []) as ProductItem[];
-    const featured = allProducts.filter((product) => product.isFeatured);
+  input: z
+    .object({
+      lang: z.enum(['es', 'en']).default('es'),
+    })
+    .optional(),
+  handler: async (input): Promise<GetFeaturedProductsResult> => {
+    const lang = input?.lang ?? 'es';
+    const allProducts = (productsData.products[lang] || productsData.products.es) as ProductItem[];
 
     return {
       message: 'Featured products retrieved successfully',
-      data: featured,
+      data: allProducts,
     };
   },
 });

@@ -7,11 +7,11 @@ const { altText } = Astro.props;
 
 const slides = [
   {
-    image: "/images/home/hero/family-winter-1.png",
+    image: "/images/home/hero/carrusel-1.png",
     alt: altText,
   },
   {
-    image: "/images/home/hero/family-winter-2.png",
+    image: "/images/home/hero/carrusel-1.png",
     alt: altText,
   },
 ];
@@ -19,7 +19,9 @@ const slides = [
 
 <div class="relative w-full max-w-xl mx-auto hero-carousel-container">
   <!-- Slides Container -->
-  <div class="relative overflow-hidden rounded-3xl border border-white/20 shadow-2xl bg-brand-green-surface/40 aspect-5/4">
+  <div
+    class="relative overflow-hidden rounded-3xl bg-brand-green-surface/40 aspect-5/4"
+  >
     {
       slides.map((slide, index) => (
         <div
@@ -36,36 +38,10 @@ const slides = [
             class="w-full h-full object-cover"
             loading={index === 0 ? "eager" : "lazy"}
           />
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark/60 via-transparent to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-green-dark/60 via-transparent to-transparent" />
         </div>
       ))
     }
-
-    <!-- Floating Product Bottle 1 (Left / Front) -->
-    <div class="absolute -bottom-6 -left-6 z-20 transition-transform duration-300 hover:scale-105 drop-shadow-2xl">
-      <div class="bg-white/90 backdrop-blur-md p-2 rounded-2xl border border-brand-green-border shadow-xl">
-        <img
-          src="/images/products/broncomiel-jarabe-miel-y-propoleo-8-oz.png"
-          alt="BroncoMiel Jarabe Adultos"
-          width="140"
-          height="210"
-          class="w-24 sm:w-28 md:w-32 h-auto object-contain"
-        />
-      </div>
-    </div>
-
-    <!-- Floating Product Bottle 2 (Right / Back) -->
-    <div class="absolute -bottom-4 -right-4 z-20 transition-transform duration-300 hover:scale-105 drop-shadow-2xl">
-      <div class="bg-white/90 backdrop-blur-md p-2 rounded-2xl border border-brand-green-border shadow-xl">
-        <img
-          src="/images/products/broncolito-bote-con-tapa-dosificadora.png"
-          alt="Broncolito Tapa Dosificadora"
-          width="120"
-          height="180"
-          class="w-20 sm:w-24 md:w-28 h-auto object-contain"
-        />
-      </div>
-    </div>
   </div>
 
   <!-- Carousel Indicators -->
@@ -75,7 +51,9 @@ const slides = [
         <button
           type="button"
           class={`carousel-dot h-2 rounded-full transition-all duration-300 ${
-            index === 0 ? "w-8 bg-brand-amber" : "w-2 bg-white/40 hover:bg-white/70"
+            index === 0
+              ? "w-8 bg-brand-amber"
+              : "w-2 bg-white/40 hover:bg-white/70"
           }`}
           data-target-index={index}
           aria-label={`Slide ${index + 1}`}

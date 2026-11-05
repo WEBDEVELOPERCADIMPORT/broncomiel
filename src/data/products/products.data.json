@@ -1,244 +1,264 @@
 {
-  "products": [
-    {
-      "id": "broncomiel-jarabe-miel-y-propoleo-8-oz",
-      "slug": "broncomiel-jarabe-miel-y-propoleo-8-oz",
-      "sku": "BM-JAR-300020",
-      "category": "jarabes",
-      "price": 12.99,
-      "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE1",
-      "presentation": {
-        "es": "Frasco de 8 fl oz (240 ml)",
-        "en": "8 fl oz (240 ml) Bottle"
-      },
-      "image": "/images/products/broncomiel-jarabe-adultos.png",
-      "title": {
-        "es": "BroncoMiel Jarabe de Miel y Propóleo 8 oz",
-        "en": "BroncoMiel Honey & Propolis Syrup 8 oz"
-      },
-      "subtitle": {
-        "es": "Fórmula tradicional enriquecida con miel cruda y extracto puro de propóleo para adultos",
-        "en": "Traditional formula enriched with raw honey and pure propolis extract for adults"
-      },
-      "description": {
-        "es": "Elaborado con miel de abeja pura y extracto estandarizado de propóleo, BroncoMiel proporciona un alivio reconfortante para la garganta irritada y apoyo respiratorio durante la temporada de invierno. Su textura emoliente recubre y calma de manera natural sin generar somnolencia.",
-        "en": "Formulated with pure bee honey and standardized propolis extract, BroncoMiel provides soothing comfort for scratchy throats and respiratory support during the winter season. Its rich texture gently coats and relieves without causing drowsiness."
-      },
-      "badges": [
-        {
-          "id": "miel-pura",
-          "label": {
-            "es": "Miel Pura 100%",
-            "en": "100% Pure Honey"
+  "products": {
+    "es": [
+      {
+        "id": "broncomiel-jarabe-miel-y-propoleo-8-oz",
+        "slug": "broncomiel-jarabe-miel-y-propoleo-8-oz",
+        "sku": "BM-JAR-300020",
+        "category": "jarabes",
+        "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE1",
+        "image": "/images/products/broncomiel-jarabe-adultos.png",
+        "name": "BroncoMiel Jarabe de Miel y Propóleo 8 oz",
+        "description": "Elaborado con miel de abeja pura y extracto estandarizado de propóleo, BroncoMiel proporciona un alivio reconfortante para la garganta irritada y apoyo respiratorio durante la temporada de invierno. Su textura emoliente recubre y calma de manera natural sin generar somnolencia.",
+        "badges": [
+          {
+            "id": "miel-pura",
+            "label": "Miel Pura 100%",
+            "icon": "honey"
           },
-          "icon": "honey"
-        },
-        {
-          "id": "sin-somnolencia",
-          "label": {
-            "es": "Sin Somnolencia Diurna",
-            "en": "Zero Daytime Drowsiness"
+          {
+            "id": "sin-somnolencia",
+            "label": "Sin Somnolencia Diurna",
+            "icon": "sun"
           },
-          "icon": "sun"
-        },
-        {
-          "id": "sin-colorantes",
-          "label": {
-            "es": "Sin Colorantes Sintéticos",
-            "en": "No Synthetic Colors"
+          {
+            "id": "sin-colorantes",
+            "label": "Sin Colorantes Sintéticos",
+            "icon": "leaf"
           },
-          "icon": "leaf"
-        },
-        {
-          "id": "apto-familia",
-          "label": {
-            "es": "Apto Niños y Adultos",
-            "en": "For Kids & Adults"
-          },
-          "icon": "family"
-        }
-      ],
-      "isFeatured": true
-    },
-    {
-      "id": "broncolito-jarabe-infantil-8-oz",
-      "slug": "broncolito-jarabe-infantil-8-oz",
-      "sku": "BL-INF-300021",
-      "category": "infantil",
-      "price": 11.99,
-      "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE2",
-      "presentation": {
-        "es": "Frasco de 8 fl oz (240 ml) con vasito dosificador",
-        "en": "8 fl oz (240 ml) Bottle with Dosing Cup"
+          {
+            "id": "apto-familia",
+            "label": "Apto Niños y Adultos",
+            "icon": "family"
+          }
+        ]
       },
-      "image": "/images/products/broncolito-jarabe-infantil.png",
-      "title": {
-        "es": "Broncolito Jarabe Infantil 8 oz",
-        "en": "Broncolito Kids Syrup 8 oz"
+      {
+        "id": "broncolito-jarabe-infantil-8-oz",
+        "slug": "broncolito-jarabe-infantil-8-oz",
+        "sku": "BL-INF-300021",
+        "category": "infantil",
+        "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE2",
+        "image": "/images/products/broncolito-jarabe-infantil.png",
+        "name": "Broncolito Jarabe Infantil 8 oz",
+        "description": "Especialmente formulado para consentir a los más pequeños del hogar. Combina la suavidad de la miel de flores silvestres con extractos botánicos de saúco y malvavisco. Delicioso sabor natural que los niños aceptan con agrado sin colorantes artificiales.",
+        "badges": [
+          {
+            "id": "miel-pura",
+            "label": "Miel Pura 100%",
+            "icon": "honey"
+          },
+          {
+            "id": "sin-somnolencia",
+            "label": "Sin Somnolencia Diurna",
+            "icon": "sun"
+          },
+          {
+            "id": "sin-colorantes",
+            "label": "Sin Colorantes Sintéticos",
+            "icon": "leaf"
+          },
+          {
+            "id": "apto-familia",
+            "label": "Apto Niños y Adultos",
+            "icon": "family"
+          }
+        ]
       },
-      "subtitle": {
-        "es": "Cuidado respiratorio suave a base de miel y extractos botánicos para niños mayores de 2 años",
-        "en": "Gentle respiratory care with honey and botanical extracts for children ages 2 and up"
+      {
+        "id": "te-herbal-caliente-broncomiel",
+        "slug": "te-herbal-caliente-broncomiel",
+        "sku": "BM-TEA-300022",
+        "category": "infusiones",
+        "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE3",
+        "image": "/images/products/te-herbal-broncomiel.png",
+        "name": "Té Herbal Caliente BroncoMiel",
+        "description": "Una infusión reconfortante para los días más fríos. Sus vapores aromáticos con eucalipto y menta despejan la respiración mientras la miel y el saúco calman el pecho. Disfrútalo bien caliente para un bienestar inmediato.",
+        "badges": [
+          {
+            "id": "miel-pura",
+            "label": "Miel Pura 100%",
+            "icon": "honey"
+          },
+          {
+            "id": "sin-somnolencia",
+            "label": "Sin Somnolencia Diurna",
+            "icon": "sun"
+          },
+          {
+            "id": "sin-colorantes",
+            "label": "Sin Colorantes Sintéticos",
+            "icon": "leaf"
+          },
+          {
+            "id": "apto-familia",
+            "label": "Apto Niños y Adultos",
+            "icon": "family"
+          }
+        ]
       },
-      "description": {
-        "es": "Especialmente formulado para consentir a los más pequeños del hogar. Combina la suavidad de la miel de flores silvestres con extractos botánicos de saúco y malvavisco. Delicioso sabor natural que los niños aceptan con agrado sin colorantes artificiales.",
-        "en": "Specially formulated for the little ones at home. Combines smooth wildflower honey with elderberry and marshmallow root extracts. A naturally delicious taste kids love without artificial dyes or sedatives."
+      {
+        "id": "broncolito-bote-con-tapa-dosificadora",
+        "slug": "broncolito-bote-con-tapa-dosificadora",
+        "sku": "BL-BOT-300023",
+        "category": "infantil",
+        "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE4",
+        "image": "/images/products/broncolito-tapa-dosificadora.png",
+        "name": "Broncolito Bote con Tapa Dosificadora",
+        "description": "La fórmula favorita de Broncolito en una presentación más práctica y rendidora. Cuenta con una tapa dosificadora antiderrame que garantiza la cantidad exacta para cada toma sin desastres ni desperdicios en casa.",
+        "badges": [
+          {
+            "id": "miel-pura",
+            "label": "Miel Pura 100%",
+            "icon": "honey"
+          },
+          {
+            "id": "sin-somnolencia",
+            "label": "Sin Somnolencia Diurna",
+            "icon": "sun"
+          },
+          {
+            "id": "sin-colorantes",
+            "label": "Sin Colorantes Sintéticos",
+            "icon": "leaf"
+          },
+          {
+            "id": "apto-familia",
+            "label": "Apto Niños y Adultos",
+            "icon": "family"
+          }
+        ]
+      }
+    ],
+    "en": [
+      {
+        "id": "broncomiel-jarabe-miel-y-propoleo-8-oz",
+        "slug": "broncomiel-jarabe-miel-y-propoleo-8-oz",
+        "sku": "BM-JAR-300020",
+        "category": "jarabes",
+        "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE1",
+        "image": "/images/products/broncomiel-jarabe-adultos.png",
+        "name": "BroncoMiel Honey & Propolis Syrup 8 oz",
+        "description": "Formulated with pure bee honey and standardized propolis extract, BroncoMiel provides soothing comfort for scratchy throats and respiratory support during the winter season. Its rich texture gently coats and relieves without causing drowsiness.",
+        "badges": [
+          {
+            "id": "miel-pura",
+            "label": "100% Pure Honey",
+            "icon": "honey"
+          },
+          {
+            "id": "sin-somnolencia",
+            "label": "Zero Daytime Drowsiness",
+            "icon": "sun"
+          },
+          {
+            "id": "sin-colorantes",
+            "label": "No Synthetic Colors",
+            "icon": "leaf"
+          },
+          {
+            "id": "apto-familia",
+            "label": "For Kids & Adults",
+            "icon": "family"
+          }
+        ]
       },
-      "badges": [
-        {
-          "id": "miel-pura",
-          "label": {
-            "es": "Miel Pura 100%",
-            "en": "100% Pure Honey"
+      {
+        "id": "broncolito-jarabe-infantil-8-oz",
+        "slug": "broncolito-jarabe-infantil-8-oz",
+        "sku": "BL-INF-300021",
+        "category": "infantil",
+        "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE2",
+        "image": "/images/products/broncolito-jarabe-infantil.png",
+        "name": "Broncolito Kids Syrup 8 oz",
+        "description": "Specially formulated for the little ones at home. Combines smooth wildflower honey with elderberry and marshmallow root extracts. A naturally delicious taste kids love without artificial dyes or sedatives.",
+        "badges": [
+          {
+            "id": "miel-pura",
+            "label": "100% Pure Honey",
+            "icon": "honey"
           },
-          "icon": "honey"
-        },
-        {
-          "id": "sin-somnolencia",
-          "label": {
-            "es": "Sin Somnolencia Diurna",
-            "en": "Zero Daytime Drowsiness"
+          {
+            "id": "sin-somnolencia",
+            "label": "Zero Daytime Drowsiness",
+            "icon": "sun"
           },
-          "icon": "sun"
-        },
-        {
-          "id": "sin-colorantes",
-          "label": {
-            "es": "Sin Colorantes Sintéticos",
-            "en": "No Synthetic Colors"
+          {
+            "id": "sin-colorantes",
+            "label": "No Synthetic Colors",
+            "icon": "leaf"
           },
-          "icon": "leaf"
-        },
-        {
-          "id": "apto-familia",
-          "label": {
-            "es": "Apto Niños y Adultos",
-            "en": "For Kids & Adults"
-          },
-          "icon": "family"
-        }
-      ],
-      "isFeatured": true
-    },
-    {
-      "id": "te-herbal-caliente-broncomiel",
-      "slug": "te-herbal-caliente-broncomiel",
-      "sku": "BM-TEA-300022",
-      "category": "infusiones",
-      "price": 9.49,
-      "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE3",
-      "presentation": {
-        "es": "Caja con 20 sobres individuales",
-        "en": "Box of 20 Individual Tea Bags"
+          {
+            "id": "apto-familia",
+            "label": "For Kids & Adults",
+            "icon": "family"
+          }
+        ]
       },
-      "image": "/images/products/te-herbal-broncomiel.png",
-      "title": {
-        "es": "Té Herbal Caliente BroncoMiel",
-        "en": "BroncoMiel Hot Herbal Tea"
+      {
+        "id": "te-herbal-caliente-broncomiel",
+        "slug": "te-herbal-caliente-broncomiel",
+        "sku": "BM-TEA-300022",
+        "category": "infusiones",
+        "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE3",
+        "image": "/images/products/te-herbal-broncomiel.png",
+        "name": "BroncoMiel Hot Herbal Tea",
+        "description": "A comforting warm infusion designed for chilly winter days. Its aromatic steam with eucalyptus and peppermint refreshes breathing while honey and elderberry soothe the chest. Enjoy piping hot for immediate relief.",
+        "badges": [
+          {
+            "id": "miel-pura",
+            "label": "100% Pure Honey",
+            "icon": "honey"
+          },
+          {
+            "id": "sin-somnolencia",
+            "label": "Zero Daytime Drowsiness",
+            "icon": "sun"
+          },
+          {
+            "id": "sin-colorantes",
+            "label": "No Synthetic Colors",
+            "icon": "leaf"
+          },
+          {
+            "id": "apto-familia",
+            "label": "For Kids & Adults",
+            "icon": "family"
+          }
+        ]
       },
-      "subtitle": {
-        "es": "Infusión reconfortante con eucalipto, menta, saúco y extracto de miel deshidratada",
-        "en": "Comforting infusion with eucalyptus, peppermint, elderberry, and dehydrated honey extract"
-      },
-      "description": {
-        "es": "Una infusión reconfortante para los días más fríos. Sus vapores aromáticos con eucalipto y menta despejan la respiración mientras la miel y el saúco calman el pecho. Disfrútalo bien caliente para un bienestar inmediato.",
-        "en": "A comforting warm infusion designed for chilly winter days. Its aromatic steam with eucalyptus and peppermint refreshes breathing while honey and elderberry soothe the chest. Enjoy piping hot for immediate relief."
-      },
-      "badges": [
-        {
-          "id": "miel-pura",
-          "label": {
-            "es": "Miel Pura 100%",
-            "en": "100% Pure Honey"
+      {
+        "id": "broncolito-bote-con-tapa-dosificadora",
+        "slug": "broncolito-bote-con-tapa-dosificadora",
+        "sku": "BL-BOT-300023",
+        "category": "infantil",
+        "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE4",
+        "image": "/images/products/broncolito-tapa-dosificadora.png",
+        "name": "Broncolito Bottle with Dosing Cap",
+        "description": "The beloved Broncolito formula in a higher-capacity and ultra-convenient family format. Equipped with a no-mess dosing cap to ensure exact portions every time without spills or sticky bottles.",
+        "badges": [
+          {
+            "id": "miel-pura",
+            "label": "100% Pure Honey",
+            "icon": "honey"
           },
-          "icon": "honey"
-        },
-        {
-          "id": "sin-somnolencia",
-          "label": {
-            "es": "Sin Somnolencia Diurna",
-            "en": "Zero Daytime Drowsiness"
+          {
+            "id": "sin-somnolencia",
+            "label": "Zero Daytime Drowsiness",
+            "icon": "sun"
           },
-          "icon": "sun"
-        },
-        {
-          "id": "sin-colorantes",
-          "label": {
-            "es": "Sin Colorantes Sintéticos",
-            "en": "No Synthetic Colors"
+          {
+            "id": "sin-colorantes",
+            "label": "No Synthetic Colors",
+            "icon": "leaf"
           },
-          "icon": "leaf"
-        },
-        {
-          "id": "apto-familia",
-          "label": {
-            "es": "Apto Niños y Adultos",
-            "en": "For Kids & Adults"
-          },
-          "icon": "family"
-        }
-      ],
-      "isFeatured": true
-    },
-    {
-      "id": "broncolito-bote-con-tapa-dosificadora",
-      "slug": "broncolito-bote-con-tapa-dosificadora",
-      "sku": "BL-BOT-300023",
-      "category": "infantil",
-      "price": 14.99,
-      "amazonUrl": "https://www.amazon.com/dp/B0EXAMPLE4",
-      "presentation": {
-        "es": "Bote ergonómico de 12 fl oz con tapa antiderrame y cuchara dosificadora",
-        "en": "12 fl oz Ergonomic Bottle with Spill-Proof Cap & Dosing Spoon"
-      },
-      "image": "/images/products/broncolito-tapa-dosificadora.png",
-      "title": {
-        "es": "Broncolito Bote con Tapa Dosificadora",
-        "en": "Broncolito Bottle with Dosing Cap"
-      },
-      "subtitle": {
-        "es": "Envase familiar ergonómico con sistema antigoteo y medida exacta para niños",
-        "en": "Ergonomic family bottle with anti-drip system and accurate measurement for kids"
-      },
-      "description": {
-        "es": "La fórmula favorita de Broncolito en una presentación más práctica y rendidora. Cuenta con una tapa dosificadora antiderrame que garantiza la cantidad exacta para cada toma sin desastres ni desperdicios en casa.",
-        "en": "The beloved Broncolito formula in a higher-capacity and ultra-convenient family format. Equipped with a no-mess dosing cap to ensure exact portions every time without spills or sticky bottles."
-      },
-      "badges": [
-        {
-          "id": "miel-pura",
-          "label": {
-            "es": "Miel Pura 100%",
-            "en": "100% Pure Honey"
-          },
-          "icon": "honey"
-        },
-        {
-          "id": "sin-somnolencia",
-          "label": {
-            "es": "Sin Somnolencia Diurna",
-            "en": "Zero Daytime Drowsiness"
-          },
-          "icon": "sun"
-        },
-        {
-          "id": "sin-colorantes",
-          "label": {
-            "es": "Sin Colorantes Sintéticos",
-            "en": "No Synthetic Colors"
-          },
-          "icon": "leaf"
-        },
-        {
-          "id": "apto-familia",
-          "label": {
-            "es": "Apto Niños y Adultos",
-            "en": "For Kids & Adults"
-          },
-          "icon": "family"
-        }
-      ],
-      "isFeatured": true
-    }
-  ]
+          {
+            "id": "apto-familia",
+            "label": "For Kids & Adults",
+            "icon": "family"
+          }
+        ]
+      }
+    ]
+  }
 }

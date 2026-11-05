@@ -1,0 +1,35 @@
+---
+interface Props {
+  id: string;
+  question: string;
+  answer: string;
+  isOpenDefault?: boolean;
+}
+
+const { id, question, answer, isOpenDefault = false } = Astro.props;
+---
+
+<div class="faq-item border border-brand-green-border/40 rounded-2xl overflow-hidden bg-white shadow-xs transition-colors">
+  <button
+    type="button"
+    class="faq-trigger w-full px-6 py-5 text-left font-bold text-brand-green-dark flex justify-between items-center gap-4 hover:bg-brand-green-light/30 transition-colors focus:outline-hidden"
+    aria-expanded={isOpenDefault ? "true" : "false"}
+    data-target={`faq-content-${id}`}
+  >
+    <span class="text-sm sm:text-base leading-snug">{question}</span>
+    <span class="faq-icon shrink-0 w-8 h-8 rounded-full bg-brand-green-light flex items-center justify-center text-brand-green-primary transition-transform duration-300">
+      <svg class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
+      </svg>
+    </span>
+  </button>
+
+  <div
+    id={`faq-content-${id}`}
+    class={`faq-content px-6 pb-5 pt-1 text-sm text-gray-600 leading-relaxed ${
+      isOpenDefault ? "block" : "hidden"
+    }`}
+  >
+    <p>{answer}</p>
+  </div>
+</div>

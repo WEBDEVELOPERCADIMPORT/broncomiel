@@ -35,6 +35,10 @@
   background: linear-gradient(180deg, #072113 0%, #114328 75%, rgba(245, 158, 11, 0.18) 100%);
 }
 
+.bg-brand-diagonal-gradient {
+  background: linear-gradient(135deg, #0b3a27 0%, #0b3a26 35%, #294a2b 50%, #646a36 65%, #978744 75%, #c6a151 85%, #edb95f 95%, #fec365 100%);
+}
+
 .card-product {
   background-color: #ffffff;
   border-radius: 1rem;

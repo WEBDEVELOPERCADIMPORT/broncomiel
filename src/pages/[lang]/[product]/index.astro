@@ -1,0 +1,58 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LANGUAGES, type Lang } from '../../../i18n/config.i18n';
+import { actions } from 'astro:actions';
+import Breadcrumb from '../../../components/product/components/Breadcrumb.astro';
+import ProductDetail from '../../../components/product/sections/ProductDetail.astro';
+import RelatedProducts from '../../../components/product/sections/RelatedProducts.astro';
+
+const lang = Astro.params.lang as Lang;
+const productSlug = Astro.params.product as string;
+
+// 1. Validate language & param
+if (!(lang in LANGUAGES) || !productSlug) {
+  return Astro.redirect('/404');
+}
+
+// 2. Query product by slug via Server Action with active language
+const { data: productResponse, error: productError } = await Astro.callAction(
+  actions.getProductBySlug,
+  { slug: productSlug, lang }
+);
+
+if (productError || !productResponse?.data) {
+  return Astro.redirect('/404');
+}
+
+const product = productResponse.data;
+const localizedName = product.name;
+const localizedDesc = product.description;
+
+// 3. Query related complementary products with active language
+const { data: relatedResponse } = await Astro.callAction(
+  actions.getRelatedProducts,
+  { currentSlug: productSlug, limit: 3, lang }
+);
+
+const relatedProducts = relatedResponse?.data ?? [];
+---
+
+<Layout
+  title={`${localizedName} | BroncoMiel`}
+  lang={lang}
+  description={localizedDesc}
+  image={product.image}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Breadcrumb lang={lang} title={localizedName} category={product.category} />
+  </div>
+
+  <main>
+    <ProductDetail product={product} lang={lang} />
+    {
+      relatedProducts.length > 0 && (
+        <RelatedProducts relatedProducts={relatedProducts} lang={lang} />
+      )
+    }
+  </main>
+</Layout>

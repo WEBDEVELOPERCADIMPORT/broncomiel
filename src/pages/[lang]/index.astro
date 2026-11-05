@@ -1,30 +1,50 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import content from '../../data/site-example-content.json';
-import type { Lang } from '../../i18n/config.i18n';
+import homeContent from '../../data/site-home-content.json';
+import { LANGUAGES, type Lang } from '../../i18n/config.i18n';
+import { actions } from 'astro:actions';
+import Hero from '../../components/home/sections/Hero.astro';
+import WhyChoose from '../../components/home/sections/WhyChoose.astro';
+import FeaturedProducts from '../../components/home/sections/FeaturedProducts.astro';
+import FamilyBanner from '../../components/home/sections/FamilyBanner.astro';
+import Reviews from '../../components/common/Reviews.astro';
+import StoreLocator from '../../components/home/sections/StoreLocator.astro';
+import FaqSection from '../../components/home/sections/FaqSection.astro';
 
 const lang = Astro.params.lang as Lang;
-const data = content[lang];
 
-if (!(lang in content)) {
-    return Astro.redirect('/404');
+if (!(lang in LANGUAGES) || !(lang in homeContent)) {
+  return Astro.redirect('/404');
 }
+
+const content = homeContent[lang];
+
+// Fetch featured products using Server Action with active language
+const { data: response } = await Astro.callAction(actions.getFeaturedProducts, { lang });
+const products = response?.data ?? [];
+
+// Fetch places for the store locator
+const { data: placesResponse } = await Astro.callAction(actions.getPlaces, {});
+const places = placesResponse?.data ?? [];
 ---
 
-<Layout title={data.brandName} lang={lang}>
-    <main class="min-h-screen flex flex-col items-center justify-center relative p-6">
-        
-        <div class="relative group mb-20">
-            <div class="absolute inset-0 bg-gradient-to-r from-[#21D4ED] to-[#AF25FD] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-500 rounded-full"></div>
-            <img 
-                src="/logo.png" 
-                alt="Logo Flotante" 
-                class="relative w-48 h-48 md:w-64 md:h-64 object-contain animate-float"
-            />
-            <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 w-3/4 h-4 bg-black/40 blur-md rounded-full animate-shadow"></div>
-        </div>
-        <h1 class="text-gray-400 text-center">
-            {data.autroui.title}
-        </h1>
-    </main>
+<Layout
+  title={content.brandName}
+  lang={lang}
+  description={content.meta?.description}
+>
+  <Hero lang={lang} />
+  <WhyChoose lang={lang} />
+  <FeaturedProducts lang={lang} products={products} />
+  <FamilyBanner lang={lang} />
+  <Reviews
+    lang={lang}
+    title={content.reviews.sectionTitle}
+    ratingValue={content.reviews.ratingValue}
+    totalReviews={content.reviews.totalReviews}
+    amazonLogoAlt={content.reviews.amazonLogoAlt}
+    reviews={content.reviews.items}
+  />
+  <StoreLocator lang={lang} places={places} />
+  <FaqSection lang={lang} />
 </Layout>

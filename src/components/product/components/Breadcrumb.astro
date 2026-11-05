@@ -1,0 +1,59 @@
+---
+import type { Lang } from "../../../i18n/config.i18n";
+import productContent from "../../../data/site-product-content.json";
+
+interface Props {
+  lang: Lang;
+  title: string;
+  category?: string;
+}
+
+const { lang, title, category } = Astro.props;
+const t = productContent[lang] ?? productContent.es;
+const categoryLabel = category || t.breadcrumbCategory;
+---
+
+<nav aria-label="Breadcrumb" class="py-4">
+  <ol class="flex items-center flex-wrap gap-2 text-xs sm:text-sm text-gray-500">
+    <!-- Home -->
+    <li>
+      <a
+        href={`/${lang}/`}
+        class="hover:text-brand-green-primary transition-colors font-medium"
+      >
+        {t.breadcrumbHome}
+      </a>
+    </li>
+
+    <li aria-hidden="true" class="text-gray-300">/</li>
+
+    <!-- Catalog -->
+    <li>
+      <a
+        href={`/${lang}/#productos`}
+        class="hover:text-brand-green-primary transition-colors font-medium"
+      >
+        {t.breadcrumbCatalog}
+      </a>
+    </li>
+
+    <li aria-hidden="true" class="text-gray-300">/</li>
+
+    <!-- Category -->
+    <li>
+      <a
+        href={`/${lang}/#productos`}
+        class="hover:text-brand-green-primary transition-colors font-medium capitalize"
+      >
+        {categoryLabel}
+      </a>
+    </li>
+
+    <li aria-hidden="true" class="text-gray-300">/</li>
+
+    <!-- Current Product Title -->
+    <li class="font-semibold text-brand-green-dark truncate max-w-xs sm:max-w-md" aria-current="page">
+      {title}
+    </li>
+  </ol>
+</nav>

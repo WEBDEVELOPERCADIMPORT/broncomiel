@@ -1,0 +1,26 @@
+---
+interface Props {
+  image: string;
+  title: string;
+}
+
+const { image, title } = Astro.props;
+---
+
+<div class="relative w-full rounded-3xl bg-gradient-to-b from-brand-green-light/60 via-white to-brand-green-light/30 border border-brand-green-border/50 p-6 sm:p-10 flex items-center justify-center overflow-hidden shadow-sm group">
+  <!-- Subtle decorative botanical / honey warm glow in background -->
+  <div class="absolute -top-24 -right-24 w-64 h-64 bg-brand-amber/15 rounded-full blur-3xl pointer-events-none group-hover:bg-brand-amber/25 transition-colors duration-500"></div>
+  <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-brand-green-light rounded-full blur-3xl pointer-events-none"></div>
+
+  <!-- Main Product Image -->
+  <div class="relative z-10 w-full flex items-center justify-center">
+    <img
+      src={image}
+      alt={title}
+      width={440}
+      height={520}
+      class="max-h-[500px] w-auto object-contain mx-auto drop-shadow-xl transition-transform duration-300 group-hover:scale-105"
+      loading="eager"
+    />
+  </div>
+</div>

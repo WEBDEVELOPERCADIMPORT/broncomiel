@@ -2,16 +2,20 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="404 - No encontrado" lang="es">
-  <section class="h-screen flex flex-col justify-center items-center text-center p-5">
-    <h1 class="text-9xl font-black text-gray-200">404</h1>
-    <p class="text-2xl font-bold text-gray-800 mt-4">¡Ups! Pages not fuond</p>
-    <p class="text-gray-500 mt-2 mb-8">The page or language does not exist.</p>
+<Layout title="404 - No encontrado | BroncoMiel" lang="es">
+  <section class="min-h-[70vh] flex flex-col justify-center items-center text-center px-4 py-16">
+    <span class="text-8xl sm:text-9xl font-black text-brand-green-light">404</span>
+    <h1 class="text-2xl sm:text-3xl font-extrabold text-brand-green-dark mt-4">
+      Página no encontrada
+    </h1>
+    <p class="text-sm sm:text-base text-gray-600 mt-2 mb-8 max-w-md">
+      La página que buscas no existe o fue movida. Regresa al inicio para encontrar nuestras soluciones respiratorias.
+    </p>
     <a 
-      href="/es" 
-      class="bg-blue-600 text-white px-8 py-3 rounded-full font-bold hover:bg-blue-700 transition"
+      href="/es/" 
+      class="btn-primary-amber"
     >
-      Return to the beginning
+      Volver al Inicio
     </a>
   </section>
 </Layout>
